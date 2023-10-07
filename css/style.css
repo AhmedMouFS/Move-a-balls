@@ -1,0 +1,103 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+main{
+    position: relative;
+    width: 1000px;
+    height: 600px;
+    margin: auto;
+    background-color: aliceblue;
+}
+
+main::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 10%;
+    height: 4px;
+    background-color: #3F51B5;
+    transform: translate(-50%)
+}
+
+section{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    position: absolute;
+    animation-name: move;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
+
+.sec2,.sec4,.sec6,.sec8{
+    animation-direction: reverse;
+    right: 0;
+}
+
+.sec1{
+    top:0;
+    background-color: #8bc34a;
+}
+
+
+
+.sec2{
+    top:70px;
+    background-color: #E91E63;
+    animation-delay: 2s;
+}
+
+
+.sec3{
+    top:140px;
+    background-color: #9C27B0;
+    animation-delay: 4s;
+}
+
+.sec4{
+    top: 210px;
+    background-color: #FFEB3B;
+    animation-delay: 6s;
+}
+
+.sec5{
+    top:280px;
+    background-color: #2196F3;
+    animation-delay: 8s;
+}
+
+.sec6{
+    top:350px;
+    background-color: #FF5722;
+    animation-delay: 10s;
+}
+
+.sec7{
+    top: 420px;
+    background-color: #9E9E9E;
+    animation-delay: 12s;
+}
+
+.sec8{
+    top:490px;
+    background-color: #3F51B5;
+    animation-delay: 14s;
+}
+
+    @keyframes move {
+        0%{
+            left: 0;
+        }
+        50%{
+            top:0%;
+        }
+        100%{
+            left:100%;
+            transform: translateX(-100%);
+        }
+    }
